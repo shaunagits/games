@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/13-beads", "destination": "/13-beads/", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/13-beads/:path*", "destination": "https://13-beads.vercel.app/:path*" }
+  ]
+}
