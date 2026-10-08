@@ -11,38 +11,39 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Figtree:wght@400;500;600&family=Syne:wght@800&family=Caveat:wght@600;700&family=Press+Start+2P&display=swap">
   <style>
     :root {
-      --bg: #f1ebf7; --surface: #ffffff; --ink: #231a36; --muted: #6a5f80; --line: #dbd1e7;
-      --accent: #d3217c; --accent-ink: #ffffff;
+      /* Marbled teal: a sea green base with glowing patches, plus smoky dark veins drawn by an SVG noise filter. One look in light and dark mode. */
+      --teal: #12968f; --teal-glow: #3fd9c8; --teal-deep: #06433f;
+      --ink: #eef7f2; --muted: #b9dcd5; --accent: #ffe7a8;
       --display: 'Fredoka', 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
       --title: 'Syne', 'Arial Black', system-ui, sans-serif;
       --hand: 'Caveat', 'Bradley Hand', 'Segoe Print', cursive;
-      --photo-paper: #fbfaf6; --photo-ink: #2a2433; --photo-muted: #6b6474;
       --body: 'Figtree', 'Segoe UI', system-ui, sans-serif;
-      color-scheme: light;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #130e21; --surface: #1f1733; --ink: #f3edfb; --muted: #a99fbe; --line: #352a50;
-        --accent: #ff5fae; --accent-ink: #2b0a1c;
-        color-scheme: dark;
-      }
+      --photo-paper: #fbfaf6; --photo-ink: #2a2433; --photo-muted: #6b6474;
+      --marble: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1600' preserveAspectRatio='xMidYMid slice'%3E%3Cfilter id='m' x='-400' y='-400' width='2400' height='2400' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0016 0.003' numOctaves='3' seed='23' result='n'/%3E%3CfeDisplacementMap in='n' in2='n' scale='380' xChannelSelector='R' yChannelSelector='G' result='d'/%3E%3CfeColorMatrix in='d' type='matrix' values='0 0 0 0 0.01  0 0 0 0 0.12  0 0 0 0 0.12  1 0 0 0 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0 0 0 .12 .55 .8 .3 .04 0 0 0 0 0'/%3E%3C/feComponentTransfer%3E%3CfeGaussianBlur stdDeviation='3'/%3E%3C/filter%3E%3Crect x='-400' y='-400' width='2400' height='2400' filter='url%28%23m%29'/%3E%3C/svg%3E");
+      color-scheme: dark;
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; }
     body {
-      background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5;
+      background-color: var(--teal);
+      background-image: var(--marble),
+        radial-gradient(45% 35% at 22% 18%, color-mix(in srgb, var(--teal-glow) 70%, transparent), transparent 70%),
+        radial-gradient(50% 40% at 80% 55%, color-mix(in srgb, var(--teal-glow) 55%, transparent), transparent 70%),
+        radial-gradient(60% 50% at 40% 95%, color-mix(in srgb, var(--teal-deep) 70%, transparent), transparent 75%);
+      background-size: cover, 100% 100%, 100% 100%, 100% 100%; background-position: center;
+      min-height: 100vh; color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5;
       padding: env(safe-area-inset-top, 0px) max(20px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(20px, env(safe-area-inset-left, 0px));
     }
     main { max-width: 880px; margin: 0 auto; padding-block: 56px 72px; display: flex; flex-direction: column; gap: 40px; }
-    h1 { font: 800 clamp(2.6rem, 10vw, 4.6rem)/1 var(--title); margin: 0; letter-spacing: -0.01em; }
+    h1 { font: 800 clamp(2.6rem, 10vw, 4.6rem)/1 var(--title); margin: 0; letter-spacing: -0.01em; color: var(--ink); text-shadow: 0 2px 18px rgba(2, 40, 37, .45); }
     /* Polaroid cards: white frame, deep bottom margin with a handwritten caption, each photo resting at a slight angle. */
     .games { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 40px 32px; list-style: none; margin: 0; padding: 0; justify-items: center; }
     .games > li { width: 100%; max-width: 300px; }
     .card { display: flex; flex-direction: column; background: var(--photo-paper); color: var(--photo-ink); text-decoration: none; padding: 14px 14px 0; border-radius: 3px; height: 100%;
-      box-shadow: 0 1px 2px rgba(30, 20, 40, .18), 0 10px 24px rgba(30, 20, 40, .16); transform: rotate(var(--tilt, -1.5deg)); transition: transform .18s ease, box-shadow .18s ease; }
+      box-shadow: 0 1px 2px rgba(2, 30, 28, .3), 0 12px 28px rgba(2, 30, 28, .35); transform: rotate(var(--tilt, -1.5deg)); transition: transform .18s ease, box-shadow .18s ease; }
     .games > li:nth-child(2n) .card { --tilt: 1.8deg; }
     .games > li:nth-child(3n) .card { --tilt: -0.8deg; }
-    a.card:hover, a.card:focus-visible { transform: rotate(0deg) translateY(-6px); box-shadow: 0 2px 4px rgba(30, 20, 40, .18), 0 18px 36px rgba(30, 20, 40, .22); }
+    a.card:hover, a.card:focus-visible { transform: rotate(0deg) translateY(-6px); box-shadow: 0 2px 4px rgba(2, 30, 28, .3), 0 22px 40px rgba(2, 30, 28, .4); }
     .card:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
     .art { aspect-ratio: 1 / 1; display: grid; place-items: center; position: relative; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06);
       background:
