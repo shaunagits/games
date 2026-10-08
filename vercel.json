@@ -1,9 +1,24 @@
 {
   "redirects": [
-    { "source": "/13-beads", "destination": "/13-beads/", "permanent": false }
+    {
+      "source": "/13-beads",
+      "destination": "/13-beads/",
+      "permanent": false
+    },
+    {
+      "source": "/homebeforedark",
+      "destination": "/homebeforedark/",
+      "permanent": false
+    }
   ],
   "rewrites": [
-    { "source": "/13-beads/", "destination": "https://13-beads.vercel.app/" },
-    { "source": "/13-beads/:path*", "destination": "https://13-beads.vercel.app/:path*" }
+    {
+      "source": "/13-beads/",
+      "destination": "https://13-beads.vercel.app/"
+    },
+    {
+      "source": "/13-beads/:path*",
+      "destination": "https://13-beads.vercel.app/:path*"
+    }
   ]
 }

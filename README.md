@@ -7,13 +7,15 @@ The home page for https://games.shauna.digital, listing Shauna's browser games.
 - This repository is a plain static site: `index.html` plus `vercel.json`. There is no build step and no framework.
 - Hosting: Vercel project `games` (team `shaunagits-projects`), deployed automatically from the `main` branch. Pushing to `main` updates the live site.
 - Domain: `games.shauna.digital` is attached to that Vercel project. DNS for `shauna.digital` is managed at Namecheap, where a CNAME record for the host `games` points to Vercel.
-- Each game lives in its own repository and its own Vercel project. This site mounts a game under a path using a rewrite in `vercel.json`, so the game appears at `games.shauna.digital/<path>` without being copied here.
+- Most games live in their own repository and their own Vercel project. This site mounts such a game under a path using a rewrite in `vercel.json`, so the game appears at `games.shauna.digital/<path>` without being copied here.
+- A small game that is only static files (no build step) can instead live directly in this repository, in a folder named after its path.
 
 ## Games mounted here
 
 | Path | Repository | Vercel project | Address it forwards to |
 |---|---|---|---|
 | `/13-beads` | `shaunagits/13-beads` | `13-beads` | `https://13-beads.vercel.app` |
+| `/homebeforedark` | this repository (`homebeforedark/` folder) | `games` | not forwarded; served from this site |
 
 ## Add a game
 
@@ -25,6 +27,12 @@ The home page for https://games.shauna.digital, listing Shauna's browser games.
 3. Add a card for it to the list in `index.html`, linking to `/<path>/`.
 4. Add a row to the table above.
 5. Push to `main`, then check the home page, `/<path>`, and that the game's script files load.
+
+## Add a small static game directly
+
+1. Copy the game's files into a folder named after its path, for example `homebeforedark/index.html`. Asset paths inside the game must be relative.
+2. In `vercel.json`, add a redirect from `/<path>` to `/<path>/`. No rewrites are needed.
+3. Add a card to `index.html` and a row to the table above, then push to `main`.
 
 ## Things to know
 

@@ -41,6 +41,8 @@
       background:
         radial-gradient(60% 80% at 88% 8%, rgba(255, 244, 190, .85), transparent 70%),
         linear-gradient(135deg, #ff9ec7 0%, #f8b9e2 32%, #c8b6f6 62%, #9fd3ff 100%); }
+    .art-night { background: #000; display: block; overflow: hidden; }
+    .art-night img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; image-rendering: pixelated; display: block; }
     .strand { display: flex; align-items: center; gap: 6px; }
     .strand span { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
       font: 700 28px/1 var(--display); color: #1c1830; background: #ffffff;
@@ -70,6 +72,18 @@
             <h2>13 Beads</h2>
             <p>String a friendship bracelet, spell your phrase, and pin it to your jacket.</p>
             <span class="play">Play 13 Beads</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="/homebeforedark/">
+          <div class="art art-night" aria-hidden="true">
+            <img src="/homebeforedark/preview.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="info">
+            <h2>Home Before Dark</h2>
+            <p>Ride home at night. When the streetlights flicker, something is coming. Swerve.</p>
+            <span class="play">Play Home Before Dark</span>
           </div>
         </a>
       </li>
