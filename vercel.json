@@ -19,6 +19,14 @@
     {
       "source": "/13-beads/:path*",
       "destination": "https://13-beads.vercel.app/:path*"
+    },
+    {
+      "source": "/homebeforedark/",
+      "destination": "https://homebeforedark.vercel.app/"
+    },
+    {
+      "source": "/homebeforedark/:path*",
+      "destination": "https://homebeforedark.vercel.app/:path*"
     }
   ]
 }
