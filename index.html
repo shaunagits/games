@@ -69,6 +69,8 @@
     .soon .card { --tilt: 2.4deg; }
     .art-blank { background: linear-gradient(160deg, #4a4340, #2c2725 70%); }
     footer { color: var(--muted); font-size: .9rem; }
+    footer a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    footer a:hover, footer a:focus-visible { color: var(--ink); }
     @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
   </style>
 </head>
@@ -110,7 +112,7 @@
         </div>
       </li>
     </ul>
-    <footer>Made by Shauna.</footer>
+    <footer><a href="https://shauna.dev">Made by Shauna.</a></footer>
   </main>
 </body>
 </html>
