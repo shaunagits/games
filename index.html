@@ -12,7 +12,7 @@
   <style>
     :root {
       --bg: #f1ebf7; --surface: #ffffff; --ink: #231a36; --muted: #6a5f80; --line: #dbd1e7;
-      --accent: #d3217c; --accent-ink: #ffffff; --string: #7f7398; --denim: #3d629c; --stitch: #e0a04a;
+      --accent: #d3217c; --accent-ink: #ffffff;
       --display: 'Fredoka', 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
       --body: 'Figtree', 'Segoe UI', system-ui, sans-serif;
       color-scheme: light;
@@ -20,7 +20,7 @@
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #130e21; --surface: #1f1733; --ink: #f3edfb; --muted: #a99fbe; --line: #352a50;
-        --accent: #ff5fae; --accent-ink: #2b0a1c; --string: #d4cbe6;
+        --accent: #ff5fae; --accent-ink: #2b0a1c;
         color-scheme: dark;
       }
     }
@@ -37,15 +37,14 @@
     .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; color: inherit; text-decoration: none; transition: transform .15s ease; height: 100%; }
     .card:hover { transform: translateY(-3px); }
     .card:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-    .art { height: 170px; display: grid; place-items: center; position: relative; background: var(--denim);
-      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.07) 0 2px, transparent 2px 5px); }
-    .art::before { content: ""; position: absolute; left: 0; right: 0; top: 14px; border-top: 3px dashed var(--stitch); }
-    .strand { display: flex; align-items: center; gap: 4px; position: relative; padding: 0 16px; }
-    .strand::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: #e9e2f6; }
-    .strand span { position: relative; width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center;
-      font: 700 18px/1 var(--display); color: #1c1830; background: linear-gradient(#ffffff, #e4dfec);
-      box-shadow: inset 0 -2px 0 rgba(0,0,0,.14), 0 3px 6px rgba(10,20,60,.45); }
-    .strand span.dot { width: 15px; border-radius: 6px; background: linear-gradient(#ff8cc6, #d3217c); }
+    .art { height: 170px; display: grid; place-items: center; position: relative;
+      background:
+        radial-gradient(60% 80% at 88% 8%, rgba(255, 244, 190, .85), transparent 70%),
+        linear-gradient(135deg, #ff9ec7 0%, #f8b9e2 32%, #c8b6f6 62%, #9fd3ff 100%); }
+    .strand { display: flex; align-items: center; gap: 6px; }
+    .strand span { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
+      font: 700 28px/1 var(--display); color: #1c1830; background: #ffffff;
+      box-shadow: 0 6px 14px rgba(120, 60, 140, .28); }
     .info { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
     .info h2 { font: 600 1.4rem/1.2 var(--display); margin: 0; }
     .info p { margin: 0; color: var(--muted); }
@@ -65,7 +64,7 @@
       <li>
         <a class="card" href="/13-beads/">
           <div class="art" aria-hidden="true">
-            <div class="strand"><span>1</span><span>3</span><span class="dot"></span><span>B</span><span>E</span><span>A</span><span>D</span><span>S</span></div>
+            <div class="strand"><span>1</span><span>3</span></div>
           </div>
           <div class="info">
             <h2>13 Beads</h2>
