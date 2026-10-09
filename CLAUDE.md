@@ -4,7 +4,10 @@ The home page for https://games.shauna.digital. Read `README.md`: it explains th
 
 - Plain static site: `index.html` and `vercel.json`. No build step.
 - Repository `shaunagits/games`, Vercel project `games`, team `shaunagits-projects`. Every push to `main` deploys to production.
-- The current page design is a placeholder that Shauna plans to replace. Ideas discussed on 2026-10-08, none chosen: a bedroom shelf where each game is an object, an arcade row, or a jacket with a pin per game.
+- Current design (chosen 2026-10-08): title "Midnights" (Syne), neon tagline "Little games for late nights." that flickers, polaroid game cards with short teasing captions (Caveat), marbled teal background drawn in code (original, inspired by a teal marbled vinyl photo; the photo and its label are not used), teal polaroid tab icon, footer "Made by Shauna." linking to https://shauna.dev.
+- Card captions are short teases chosen by Shauna: 13 Beads "Make one. Trade one.", Home Before Dark "Pedal fast. Don't look back.", Coming soon has no caption. Keep new captions in that style.
+- The page description (link previews) is "Little games for late nights. Made by Shauna."
+- Vercel builds one project at a time for this account; a stuck build on another project (for example faf-app) blocks deploys here. Check the queue before assuming a push failed.
 - No em dashes in any text. No AI or assistant credit in code, commits, or docs.
 - All artwork is original. No artist names, logos, album artwork, or lyrics.
 - Shauna creates new GitHub repositories herself. A session cannot.

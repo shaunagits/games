@@ -39,7 +39,7 @@ Little browser games for late nights. This repository is the home page that ties
 ## Things to know
 
 - A game saves player data per web address. Data saved at a game's own `vercel.app` address does not appear at `games.shauna.digital/<path>`.
-- The home page design is a placeholder and is expected to change. Colors and fonts are defined at the top of the `<style>` block in `index.html`.
+- Home page design (2026-10-08): title "Midnights" in Syne, a flickering pink neon tagline "Little games for late nights." (Neonderthaw), game cards styled as polaroids with handwritten captions (Caveat), on a marbled teal background drawn in code. Colors and fonts are defined at the top of the `<style>` block in `index.html`.
 - All artwork is original. No artist names, logos, album artwork, or lyrics.
 
 ---
