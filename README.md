@@ -1,6 +1,15 @@
 # Games
 
-The home page for https://games.shauna.digital, listing Shauna's browser games.
+Little browser games for late nights. This repository is the home page that ties them together.
+
+**▶ Play: [games.shauna.digital](https://games.shauna.digital)**
+
+![The games home page](.github/screenshot.jpg)
+
+| Game | What it is |
+|---|---|
+| [13 Beads](https://games.shauna.digital/13-beads/) | String a friendship bracelet in 3D, spell a phrase, and hang it on your wall. ([repo](https://github.com/shaunagits/13-beads)) |
+| [Home Before Dark](https://games.shauna.digital/homebeforedark/) | Pedal fast. Don't look back. |
 
 ## How it is set up
 
@@ -32,3 +41,7 @@ The home page for https://games.shauna.digital, listing Shauna's browser games.
 - A game saves player data per web address. Data saved at a game's own `vercel.app` address does not appear at `games.shauna.digital/<path>`.
 - The home page design is a placeholder and is expected to change. Colors and fonts are defined at the top of the `<style>` block in `index.html`.
 - All artwork is original. No artist names, logos, album artwork, or lyrics.
+
+---
+
+Built with ♥ by [shauna.digital](https://shauna.digital)
