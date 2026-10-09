@@ -36,6 +36,7 @@
     }
     main { max-width: 880px; margin: 0 auto; padding-block: 56px 72px; display: flex; flex-direction: column; gap: 40px; }
     h1 { font: 800 clamp(2.6rem, 10vw, 4.6rem)/1 var(--title); margin: 0; letter-spacing: -0.01em; color: var(--ink); text-shadow: 0 2px 18px rgba(2, 40, 37, .45); }
+    .tagline { margin: 10px 0 0 4px; font: 500 .95rem/1.3 var(--body); letter-spacing: .04em; color: var(--muted); opacity: .85; }
     /* Polaroid cards: white frame, deep bottom margin with a handwritten caption, each photo resting at a slight angle. */
     .games { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 40px 32px; list-style: none; margin: 0; padding: 0; justify-items: center; }
     .games > li { width: 100%; max-width: 300px; }
@@ -78,6 +79,7 @@
   <main>
     <header>
       <h1>Midnights</h1>
+      <p class="tagline">Little games for late nights.</p>
     </header>
     <ul class="games">
       <li>
